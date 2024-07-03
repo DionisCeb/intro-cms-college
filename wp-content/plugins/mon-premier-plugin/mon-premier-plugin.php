@@ -43,6 +43,8 @@ function mpp_definir_const() {
 }
 add_action('plugins_loaded', 'mpp_definir_const', 0);
 
+
+
 require_once(plugin_dir_path(__FILE__) . '/includes/mpp-activation.php');
 register_activation_hook( __FILE__, 'mpp_activation' );
  
