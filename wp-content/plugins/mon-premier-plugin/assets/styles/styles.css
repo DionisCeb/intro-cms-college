@@ -1,0 +1,24 @@
+.mpp-pop-up {
+    background-color: gray;
+    border-radius: 10px;
+    padding: 20px 50px;
+    position: fixed;
+    right: 0;
+    transition: bottom .3s ease;
+    z-index: 1000;
+
+    &.mpp-pop-up--ferme {
+        bottom: -150px;
+    }
+
+    &.mpp-pop-up--ouvert {
+        bottom:50px;
+    }
+
+    p {
+        letter-spacing:  0.03em;
+        font-size: 1.2em;
+    }
+}
+
+

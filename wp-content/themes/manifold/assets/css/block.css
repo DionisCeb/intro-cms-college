@@ -1,0 +1,109 @@
+.manifold-services-card {
+  box-shadow: 0px 6px 30px 0px rgb(71, 5, 255, 0.1);
+  border: 1px solid transparent;
+}
+.wp-block-template-part {
+  margin: 0%;
+}
+.entry-content.wp-block-post-content a,
+.wp-block-comment-content a,
+p a {
+  text-decoration: underline;
+}
+/* ****************** CORE BLOCKS ****************** */
+.is-style-button-hover-primary:hover a {
+  background: var(--wp--preset--color--primary) !important;
+  color: var(--wp--preset--color--light) !important;
+}
+.is-style-button-hover-secondary:hover a {
+  background: var(--wp--preset--color--secondary) !important;
+  color: var(--wp--preset--color--light) !important;
+}
+.is-style-button-hover-foreground:hover a {
+background: var(--wp--preset--color--foreground) !important;
+color: var(--wp--preset--color--foreground-alt);
+}
+.is-style-button-hover-light:hover a {
+  background: var(--wp--preset--color--light) !important;
+  color: var(--wp--preset--color--primary);
+}
+.is-style-column-hover-border-primary > div,
+.is-style-column-hover-border-secondary > div,
+.is-style-column-hover-border-foreground > div,
+.is-style-column-hover-border-foreground-alt > div {
+  border: 1px solid transparent;
+}
+.is-style-title-hover-primary:hover a {
+  color: var(--wp--preset--color--primary) !important;
+}
+.is-style-title-hover-secondary:hover a {
+  color: var(--wp--preset--color--secondary) !important;
+}
+.is-style-title-hover-light:hover a {
+  color: var(--wp--preset--color--light) !important;
+}
+.is-style-title-hover-foreground:hover a {
+  color: var(--wp--preset--color--foreground) !important;
+}
+.is-style-column-hover-border-primary:hover > div {
+  border: 1px solid var(--wp--preset--color--primary) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+}
+.is-style-column-hover-border-secondary:hover > div {
+  border: 1px solid var(--wp--preset--color--secondary) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+}
+.is-style-column-hover-border-foreground:hover > div {
+  border: 1px solid var(--wp--preset--color--foreground) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+}
+.is-style-column-hover-border-foreground-alt:hover > div {
+  border: 1px solid var(--wp--preset--color--foreground-alt) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+}
+.is-style-link-hover-primary a:hover {
+  color: var(--wp--preset--color--primary) !important;
+}
+.is-style-link-hover-secondary a:hover {
+  color: var(--wp--preset--color--secondary) !important;
+}
+.is-style-link-hover-foreground a:hover {
+  color: var(--wp--preset--color--foreground) !important;
+}
+.is-style-link-hover-light a:hover {
+  color: var(--wp--preset--color--light) !important;
+}
+/* ************************* manifold : PRO FEATURES  ************************* */
+.manifold-pro-services-group {
+  position: relative;
+  box-shadow: 0px 6px 30px 0px rgb(71, 5, 255, 0.1);
+}
+.manifold-pro-services-icon {
+  position: absolute;
+  right: 0;
+  top: 45%;
+}
+.manifold-pro-services-group-2 {
+  box-shadow: 0px 6px 30px 0px rgb(71, 5, 255, 0.1);
+}
+.manifold-pro-custom-list {
+  list-style: url(../../../../plugins/walker-core/admin/images/manifold/list-style.png);
+}
+.manifold-pro-custom-list > li {
+  padding: 5px 0px;
+}
+.manifold-pro-prices-group:hover .manifold-pro-custom-list {
+  list-style: url(../../../../plugins/walker-core/admin/images/manifold/list-style-hover.png);
+}
+.manifold-pro-testimonial-group {
+  position: relative;
+}
+.manifold-pro-testimonial-icon {
+  position: absolute;
+  right: 5%;
+  top: -10%;
+}
