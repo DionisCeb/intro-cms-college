@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ICMS Copyright\n"
+"POT-Creation-Date: 2024-07-04 14:05-0400\n"
+"PO-Revision-Date: 2024-07-04 14:10-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: includes\n"
+"X-Poedit-SearchPath-1: templates\n"
+"X-Poedit-SearchPath-2: .\n"
+"X-Poedit-SearchPath-3: icms-copyright.php\n"
+
+#: includes/icms-copyright-panneau-admin.php:9
+#: includes/icms-copyright-panneau-admin.php:10
+msgid "ICMS Copyright"
+msgstr ""
+"Derechos de autor del ICMS\n"
+"Apellido\n"
+"Ahorrar"
+
+#: includes/icms-copyright-panneau-admin.php:37
+msgid "Nom : "
+msgstr "Apellido:"
+
+#: includes/icms-copyright-panneau-admin.php:39
+msgid "Enregistrer"
+msgstr "Ahorrar"
+
+#: templates/copyright.php:2
+msgid "Copyright"
+msgstr "Derechos de autor"
