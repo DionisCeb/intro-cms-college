@@ -11,6 +11,9 @@
 
 get_header();
 
+
+echo 'archive';
+
 $description = get_the_archive_description();
 ?>
 

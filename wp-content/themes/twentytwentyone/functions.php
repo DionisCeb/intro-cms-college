@@ -28,6 +28,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	 */
 	function twenty_twenty_one_setup() {
 
+		
+
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
