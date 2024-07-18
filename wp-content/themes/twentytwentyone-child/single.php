@@ -1,117 +1,68 @@
 <?php
- 
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twenty_One
+ * @since Twenty Twenty-One 1.0
+ */
+
 get_header();
 
+$post_type = get_post_type();
 
-/* Marqueurs de modèles (template tags) communs de WordPress */
-
-if ( have_posts() ) : 
-	while ( have_posts() ) : 
-		the_post(); 
-    ?>
-
-
-    <?php
-        //if ( strlen( get_next_post()->post_title ) > 0 ) :
-        //echo get_next_post()->post_title;
-	?>
-		<div>
-			<h6>Prochain Post</h6>
-	        <?php esc_html( next_post_link() ); ?>
-		</div>
-    <?php //endif; ?>
-
-
-    <?php //if ( strlen( get_previous_post()->post_title ) > 0 ) :
-    if( get_previous_post() ) :
-         //echo get_previous_post()->post_title;   
-    ?>
-		<div>
-			<h6>Post précédent</h6>
-	        <?php esc_html( previous_post_link() ); ?>
-		</div>
-    <?php endif; ?>
-
-
-    <?php
-        $categories = get_the_category();
-        //var_dump($categories);
-        if ( ! empty( $categories ) ) :
-    ?>
-		<div>
-			<h6>Catégorie</h6>
-	        <?php esc_html( the_category( ' ' ) ); ?>
-		</div>
-	<?php endif; ?>
-
-
-    <?php if ( get_the_author() ) :  ?>
-		<div>
-			<h6>Auteur</h6>
-	        <p><?php esc_html( the_author() ); ?></p>
-		</div>
-	<?php endif; ?>
+switch ( $post_type ) {
+	case 'produit':
+		get_template_part( 'template-parts/produit' );
+		break;
+	
+	default:
+	/* Start the loop */
+	while ( have_posts() ) :
+		the_post();
+	
+		get_template_part( 'template-parts/content/content-single' );
+	
+		if ( is_attachment() ) {
+			// Parent post navigation.
+			the_post_navigation(
+				array(
+					/* translators: %s: Parent post link. */
+					'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'twentytwentyone' ), '%title' ),
+				)
+			);
+		}
+	
+		// If comments are open or there is at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
+		}
+	
+		// Previous/next post navigation.
+		$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
+		$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
+	
+		$twentytwentyone_next_label     = esc_html__( 'Next post', 'twentytwentyone' );
+		$twentytwentyone_previous_label = esc_html__( 'Previous post', 'twentytwentyone' );
+	
+		the_post_navigation(
+			array(
+				'next_text' => '<p class="meta-nav">' . $twentytwentyone_next_label . $twentytwentyone_next . '</p><p class="post-title">%title</p>',
+				'prev_text' => '<p class="meta-nav">' . $twentytwentyone_prev . $twentytwentyone_previous_label . '</p><p class="post-title">%title</p>',
+			)
+		);
+	endwhile; // End of the loop.
+		break;
+}
 
 
-	<?php if ( get_the_content() ) : ?>
-		<div>
-			<h6>Contenu</h6>
-	        <?php esc_html( the_content() ); ?>
-		</div>
-	<?php endif; ?>
+/* ?>
+<h1>test</h1>
 
-
-    <?php // Sans condition, si l'extrait n'est pas saisi, par défaut WordPress va récupérer les 55 premiers mots ?>
-		<div>
-			<h6>Extrait</h6>
-	        <?php esc_html( the_excerpt() ); ?>
-		</div>
-    
-
-    <?php // Sans condition, toutes les entrées on un id ?>
-		<div>
-			<h6>ID</h6>
-	        <p><?php esc_html( the_ID() ); ?></p>
-		</div>
-
-
-    <?php // Sans condition ?>
-		<div>
-			<h6>Shortlink</h6>
-	        <?php esc_html( the_shortlink( 'Lien' ) ); ?>
-		</div>
-
-
-    <?php
-        $tags = get_the_tags();
-        //var_dump($tags);
-        if ( ! empty( $tags ) ) :
-    ?>
-		<div>
-			<h6>Tags</h6>
-	        <?php esc_html( the_tags() ); ?>
-		</div>
-    <?php endif; ?>
-
-
-    <?php if ( get_the_title() ) : ?>
-		<div>
-			<h6>Titre</h6>
-	        <p><?php esc_html( the_title() ); ?><p>
-		</div>
-    <?php endif; ?>
-
-
-    <?php // Sans condition ?>
-		<div>
-			<h6>Time</h6>
-	        <p><?php esc_html( the_time() ); ?></p>
-		</div>
-	<?php
-
-
-	endwhile; 
-endif; 
+<?php */
+/* Start the Loop */
 
 
 get_footer();

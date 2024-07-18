@@ -9,3 +9,8 @@ Version: 1
 body {
     background-color: rgb(112, 171, 179);
 }
+
+
+.wrapper {
+    padding: 0 max(16px, 8vw);
+}
