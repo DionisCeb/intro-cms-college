@@ -24,7 +24,7 @@
  
     $produit_description = $champs['produit_description'];
     $produit_prix = $champs['produit_prix'];
-    $produit_image = $champs['produit_image']['url'];?>
+    $produit_image = $champs['produit_image']?>
     <article>
         <a href="<?php the_permalink(); ?>">
             <img src="<?= $produit_image; ?>" />

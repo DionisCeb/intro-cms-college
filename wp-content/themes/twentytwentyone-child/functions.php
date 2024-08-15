@@ -67,3 +67,31 @@ function ttoc_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 add_filter( 'walker_nav_menu_start_el', 'ttoc_nav_menu_social_icons', 10, 4 );
 
 
+function ttoc_parametres_ajustables( $wp_customize ) {
+
+
+    $wp_customize->add_section(
+        'ttoc_parametres_ajustables',
+        array(
+            'title' => _( 'Parametres du theme '),
+            'priority' => 30
+        )
+    );
+
+    $wp_customize->add_setting(
+        'ttoc_parametres_bg_header'
+    );
+
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'ttoc_parametres_bg_header',
+            array(
+                'label' => __( 'Image BG du header' ),
+                'section' => 'ttoc_parametres_ajustables' // requis : core ou custom
+            )
+        )
+   );
+}
+add_action( 'customize_register', 'ttoc_parametres_ajustables');
