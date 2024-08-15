@@ -45,21 +45,21 @@ if( $the_query->have_posts() ):
 
 ?>
 
-<ul>
-<?php while( $the_query->have_posts() ) : $the_query->the_post();
-$champs = get_fields();
-// var_dump($champs);
+<ul class="catalog_container">
+    <?php while( $the_query->have_posts() ) : $the_query->the_post();
+    $champs = get_fields();
+    // var_dump($champs);
 
-$produit_description = $champs['produit_description'];
-$produit_prix = $champs['produit_prix'];
-$produit_image = $champs['produit_image']?>
-<article>
-    <a href="<?php the_permalink(); ?>">
-        <img src="<?= $produit_image; ?>" />
-        <?php the_title(); ?>
-    </a>
-</article>
-<?php endwhile; ?>
+    $produit_description = $champs['produit_description'];
+    $produit_prix = $champs['produit_prix'];
+    $produit_image = $champs['produit_image']?>
+    <article class="carte-produit">
+        <a href="<?php the_permalink(); ?>">
+            <img src="<?= $produit_image; ?>" />
+            <div class="lien_produit"><div class="title-produit"><?php the_title(); ?></div></div>
+        </a>
+    </article>
+    <?php endwhile; ?>
 </ul>
 <?php endif; ?>
 
