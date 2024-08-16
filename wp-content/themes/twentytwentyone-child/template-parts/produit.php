@@ -2,7 +2,7 @@
 
 $champs = get_fields();
 //var_dump($champs);
-
+ $produit_titre = $champs['produit_titre'];
  $produit_description = $champs['produit_description'];
  $produit_prix = $champs['produit_prix'];
  $produit_image = $champs['produit_image'];
@@ -15,6 +15,9 @@ $champs = get_fields();
             <?php the_title(); ?>
         </h2>
         <div>
+            <?php if( $produit_titre ) : ?>
+                <h1><?php echo  $produit_titre; ?></h1>
+            <?php endif; ?>
             <?php if( $produit_description ) : ?>
                 <p><?php echo  $produit_description; ?></p>
             <?php endif; ?>

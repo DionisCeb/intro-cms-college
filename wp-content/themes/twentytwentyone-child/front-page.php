@@ -50,13 +50,19 @@ if( $the_query->have_posts() ):
     $champs = get_fields();
     // var_dump($champs);
 
+    $produit_titre = $champs['produit_titre'];
     $produit_description = $champs['produit_description'];
     $produit_prix = $champs['produit_prix'];
     $produit_image = $champs['produit_image']?>
     <article class="carte-produit">
         <a href="<?php the_permalink(); ?>">
             <img src="<?= $produit_image; ?>" />
-            <div class="lien_produit"><div class="title-produit"><?php the_title(); ?></div></div>
+            <!-- <div class="lien_produit"><div class="title-produit"><?php the_title(); ?></div></div> -->
+        </a>
+        <h3><?php echo $produit_titre ?></h3>
+        <p><?php echo $produit_description; ?></p>
+        <a href="<?php the_permalink(); ?>">
+            <div class="lien_produit"><div class="title-produit">Voir</div></div>
         </a>
     </article>
     <?php endwhile; ?>
