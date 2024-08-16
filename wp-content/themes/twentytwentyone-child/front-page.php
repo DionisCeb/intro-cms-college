@@ -50,17 +50,20 @@ if( $the_query->have_posts() ):
     $champs = get_fields();
     // var_dump($champs);
 
-    $produit_titre = $champs['produit_titre'];
-    $produit_description = $champs['produit_description'];
-    $produit_prix = $champs['produit_prix'];
-    $produit_image = $champs['produit_image']?>
+    $chaise_titre = $champs['chaise_titre'];
+    $chaise_anee = $champs['chaise_anee'];
+    $chaise_designer = $champs['chaise_designer'];
+    $chaise_prix = $champs['chaise_prix'];
+    $chaise_image = $champs['chaise_image']?>
+    
     <article class="carte-produit">
         <a href="<?php the_permalink(); ?>">
-            <img src="<?= $produit_image; ?>" />
+            <img src="<?= $chaise_image; ?>" />
             <!-- <div class="lien_produit"><div class="title-produit"><?php the_title(); ?></div></div> -->
         </a>
-        <h3><?php echo $produit_titre ?></h3>
-        <p><?php echo $produit_description; ?></p>
+        <h1><?php echo $chaise_titre; ?></h1>
+        <h3><?php echo $chaise_anee ?></h3>
+        <p><?php echo $chaise_designer; ?></p>
         <a href="<?php the_permalink(); ?>">
             <div class="lien_produit"><div class="title-produit">Voir</div></div>
         </a>

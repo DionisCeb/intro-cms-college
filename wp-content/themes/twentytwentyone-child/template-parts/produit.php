@@ -2,10 +2,11 @@
 
 $champs = get_fields();
 //var_dump($champs);
- $produit_titre = $champs['produit_titre'];
- $produit_description = $champs['produit_description'];
- $produit_prix = $champs['produit_prix'];
- $produit_image = $champs['produit_image'];
+ $chaise_titre = $champs['chaise_titre'];
+ $chaise_anee = $champs['chaise_anee'];
+ $chaise_designer = $champs['chaise_designer'];
+ $chaise_prix = $champs['chaise_prix'];
+ $chaise_image = $champs['chaise_image'];
 
 ?>
  <article>
@@ -15,19 +16,22 @@ $champs = get_fields();
             <?php the_title(); ?>
         </h2>
         <div>
-            <?php if( $produit_titre ) : ?>
-                <h1><?php echo  $produit_titre; ?></h1>
+            <?php if( $chaise_titre ) : ?>
+                <h1><?php echo  $chaise_titre; ?></h1>
             <?php endif; ?>
-            <?php if( $produit_description ) : ?>
-                <p><?php echo  $produit_description; ?></p>
+            <?php if( $chaise_anee ) : ?>
+                <h1><?php echo  $chaise_anee; ?></h1>
             <?php endif; ?>
-            <?php if( $produit_image ) : ?>
+            <?php if( $chaise_designer ) : ?>
+                <p><?php echo  $chaise_designer; ?></p>
+            <?php endif; ?>
+            <?php if( $chaise_image ) : ?>
             <div>
-                <img src="<?php echo $produit_image; ?>" alt="<?php  the_title(); ?>">
+                <img src="<?php echo $chaise_image; ?>" alt="<?php  the_title(); ?>">
             </div>
             <?php endif; ?>
-            <?php if( $produit_prix ) : ?>
-                <p><?php echo  $produit_prix; ?></p>
+            <?php if( $chaise_prix ) : ?>
+                <p><?php echo  $chaise_prix; ?></p>
             <?php endif; ?>
         </div>
     </div>
