@@ -1,0 +1,71 @@
+.catalog_container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.carte-chaise {
+    padding: 20px;
+    background-color: rgb(254 254 254);
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
+
+    /*largeur*/
+    max-width: 400px;
+}
+
+.chaise-designer,
+.chaise-titre {
+    text-align: center;
+}
+
+/*titre*/
+.chaise-titre h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(158, 120, 49);
+}
+
+/*designer*/
+.chaise-designer {
+    font-size: 18px;
+}
+/*l'image*/
+
+.chaise-image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*le bouton*/
+
+.link-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+.link-btn {
+    padding: 20px;
+    width: 70%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(158, 120, 49);
+
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 1s;
+}
+
+
+.link-btn:hover {
+    scale: 0.96;
+}

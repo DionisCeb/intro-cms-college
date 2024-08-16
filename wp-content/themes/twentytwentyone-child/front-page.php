@@ -56,18 +56,22 @@ if( $the_query->have_posts() ):
     $chaise_prix = $champs['chaise_prix'];
     $chaise_image = $champs['chaise_image']?>
     
-    <article class="carte-produit">
-        <a href="<?php the_permalink(); ?>">
-            <img src="<?= $chaise_image; ?>" />
-            <!-- <div class="lien_produit"><div class="title-produit"><?php the_title(); ?></div></div> -->
-        </a>
-        <h1><?php echo $chaise_titre; ?></h1>
-        <h3><?php echo $chaise_anee ?></h3>
-        <p><?php echo $chaise_designer; ?></p>
-        <a href="<?php the_permalink(); ?>">
-            <div class="lien_produit"><div class="title-produit">Voir</div></div>
-        </a>
-    </article>
+    <div class="carte-chaise">
+        <div class="chaise-image">
+            <a href="<?php the_permalink(); ?>">
+                <img src="<?= $chaise_image; ?>" />
+            </a>
+        </div>
+        <div class="chaise-titre">
+            <h1><?php echo $chaise_titre; ?></h1>
+        </div>
+        <div class="chaise-designer">
+            <p><?php echo $chaise_designer; ?></p>
+        </div>
+        <div class="link-wrapper">
+            <a class="link-btn" href="<?php the_permalink(); ?>">Voir plus</a>
+        </div>
+    </div>
     <?php endwhile; ?>
 </ul>
 <?php endif; ?>
