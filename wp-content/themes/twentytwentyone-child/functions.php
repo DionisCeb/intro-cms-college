@@ -26,45 +26,7 @@ function ttoc_ajoute_auteur() {
 
 
 
-    function ttoc_widgets_init() {
-
-        register_sidebar(
-            array(
-                'name'          => esc_html__( 'Demo', 'twentytwentyone' ),
-                'id'            => 'sidebar-2',
-                'description'   => esc_html__( 'Je suis une nouvelle widget.', 'twentytwentyone' ),
-                'before_widget' => '<section id="%1$s" class="widget %2$s">',
-                'after_widget'  => '</section>',
-                'before_title'  => '<h2 class="widget-title">',
-                'after_title'   => '</h2>',
-            )
-        );
-    }
- 
-    add_action( 'widgets_init', 'ttoc_widgets_init', 15 );
-
-
-    function ttoc_ajoute_menus() {
-        register_nav_menus(
-            array(
-                'social' => esc_html__( 'Social Menu')
-            )
-        );
-    }
-add_action('init', 'ttoc_ajoute_menus');
-
-
-function ttoc_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
- // Change SVG icon inside social links menu if there is supported URL.
-    if ( 'social' === $args->theme_location ) {
-        $svg = twenty_twenty_one_get_social_link_svg( $item->url, 24 );
-    if ( ! empty( $svg ) ) {
-        $item_output = str_replace( $args->link_before, $svg, $item_output );
-    }
-    }
-    return $item_output;
-    }
-add_filter( 'walker_nav_menu_start_el', 'ttoc_nav_menu_social_icons', 10, 4 );
+  
 
 
 function ttoc_parametres_ajustables( $wp_customize ) {
@@ -95,3 +57,50 @@ function ttoc_parametres_ajustables( $wp_customize ) {
    );
 }
 add_action( 'customize_register', 'ttoc_parametres_ajustables');
+
+/* FOOTER COSTUMIZER*/
+function mon_theme_customize_register($wp_customize) {
+    // Section Footer
+    $wp_customize->add_section('mon_theme_footer_section', array(
+        'title'    => __('Footer Contact', 'mon-theme'),
+        'priority' => 160,
+    ));
+    
+    // Adresse
+    $wp_customize->add_setting('mon_theme_footer_address', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+    
+    $wp_customize->add_control('mon_theme_footer_address', array(
+        'label'    => __('Adresse', 'mon-theme'),
+        'section'  => 'mon_theme_footer_section',
+        'type'     => 'textarea',
+    ));
+    
+    // Téléphone
+    $wp_customize->add_setting('mon_theme_footer_phone', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    
+    $wp_customize->add_control('mon_theme_footer_phone', array(
+        'label'    => __('Téléphone', 'mon-theme'),
+        'section'  => 'mon_theme_footer_section',
+        'type'     => 'tel',
+    ));
+    
+    // Courriel
+    $wp_customize->add_setting('mon_theme_footer_email', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_email',
+    ));
+    
+    $wp_customize->add_control('mon_theme_footer_email', array(
+        'label'    => __('Courriel', 'mon-theme'),
+        'section'  => 'mon_theme_footer_section',
+        'type'     => 'email',
+    ));
+}
+
+add_action('customize_register', 'mon_theme_customize_register');
