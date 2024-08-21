@@ -1,0 +1,21 @@
+@import url(widget-area.css);
+/*site-info pied de page contenteur (le nom et les contactes)*/
+.site-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*pied de page contactes conteneur*/
+.footer-contacts__wrapper {
+    display: flex;
+    justify-content: end;
+    text-align: right;
+}
+
+/*cacher le lien pour le telephone*/
+@media (min-width: 769px) {
+    .tel-lien {
+        pointer-events: none;
+        text-decoration: none;
+    }
+}

@@ -12,9 +12,6 @@
  */
 
 ?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
-	</div><!-- #content -->
 
 	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
@@ -60,37 +57,33 @@
 			}
 			?>
 
-			<div class="powered-by">
-				<?php
-				printf(
-					
-					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
-					'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '">WordPress</a>'
-				);
-				?>
-			</div><!-- .powered-by -->
-
+				<?php if ( get_theme_mod('footer_address_func') || get_theme_mod('footer_phone_func') || get_theme_mod('footer_email_func') ) : ?>
+					<div class="footer-contacts__wrapper">
+						<div class="footer-contacts">
+							<?php if ( get_theme_mod('footer_address_func') ) : ?>
+								
+								<address class="footer-address"><?php echo nl2br(esc_textarea(get_theme_mod('footer_address_func'))); ?></address>
+							<?php endif; ?>
+							<?php if ( get_theme_mod('footer_phone_func') ) : ?>
+								<p class="footer-phone">
+									<a class="tel-lien" href="tel:"><?php echo esc_html(get_theme_mod('footer_phone_func'));?></a>
+								</p>
+							<?php endif; ?>
+							<?php if ( get_theme_mod('footer_email_func') ) : ?>
+								<p class="footer-email"> <a href="mailto:<?php echo esc_attr(get_theme_mod('footer_email_func')); ?>">
+								<?php echo esc_html(get_theme_mod('footer_email_func')); ?>
+									</a>
+									</p>
+							<?php endif; ?>
+						</div>
+					</div>
+				<?php endif; ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
 
-<?php if ( get_theme_mod('mon_theme_footer_address') || get_theme_mod('mon_theme_footer_phone') || get_theme_mod('mon_theme_footer_email') ) : ?>
-    <div class="footer-contacts">
-        <?php if ( get_theme_mod('mon_theme_footer_address') ) : ?>
-            <p class="footer-address"><?php echo esc_textarea(get_theme_mod('mon_theme_footer_address')); ?></p>
-        <?php endif; ?>
-        <?php if ( get_theme_mod('mon_theme_footer_phone') ) : ?>
-            <p class="footer-phone"><?php echo esc_html(get_theme_mod('mon_theme_footer_phone')); ?></p>
-        <?php endif; ?>
-        <?php if ( get_theme_mod('mon_theme_footer_email') ) : ?>
-            <p class="footer-email"> <a href="mailto:<?php echo esc_attr(get_theme_mod('mon_theme_footer_email')); ?>">
-            <?php echo esc_html(get_theme_mod('mon_theme_footer_email')); ?>
-        		</a>
-			</p>
-        <?php endif; ?>
-    </div>
-<?php endif; ?>
+
 
 
 

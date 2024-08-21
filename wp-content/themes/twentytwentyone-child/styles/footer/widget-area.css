@@ -1,0 +1,5 @@
+aside.widget-area section>* {
+    background: gray;
+    opacity: 0;
+    height: 10dvh;
+}
