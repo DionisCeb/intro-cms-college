@@ -1,21 +1,29 @@
-.catalog_container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+:root {
+    --carte-text:  rgb(158, 120, 49);
+    --shadow: 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+.catalog_container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 20px), 1fr));
+    gap: 20px;
+    justify-content: center;
+    box-sizing: border-box; 
+}
 
 .carte-chaise {
     padding: 20px;
-    background-color: rgb(254 254 254);
+    border-radius: 20px;
     display: flex;
-    border-radius: 10px;
     flex-direction: column;
-    gap: 10px;
-
-    /*largeur*/
-    max-width: 400px;
+    gap: 20px;
+    background-color: rgb(254, 254, 254);
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
 }
+
 
 .chaise-designer,
 .chaise-titre {
@@ -26,7 +34,7 @@
 .chaise-titre h1{
     font-size: 40px;
     font-weight: bold;
-    color: rgb(158, 120, 49);
+    color: var(--carte-text);
 }
 
 /*designer*/
@@ -55,7 +63,7 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background-color: rgb(158, 120, 49);
+    background-color: var(--carte-text);
 
     text-decoration: none;
     text-align: center;

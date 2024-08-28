@@ -2,3 +2,37 @@
     display: flex;
     justify-content: center;
 }
+
+.produit--chaise {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color:white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+/*info*/
+.info-chaise {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*titre*/
+.info-chaise h1 {
+    color: var(--carte-text);
+    font-weight: bold;
+}
+
+/*contenu*/
+.info-chaise p {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--carte-text);
+}
+
+.info-chaise span {
+    color: rgb(128, 104, 104);
+}

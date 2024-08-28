@@ -1,0 +1,121 @@
+0000.003 () Opened log file at time: Wed, 28 Aug 2024 01:06:03 +0000 on http://localhost/intro-cms-college
+0000.004 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.4 WP: 6.5.5 PHP: 8.2.18 (apache2handler, Windows NT DESKTOP-7NL96UA 10.0 build 19045 (Windows 10) AMD64) MySQL: 8.3.0 (max packet size=67108864) WPLANG: en_CA Server: Apache/2.4.59 (Win64) PHP/8.2.18 mod_fcgid/2.3.10-dev safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 4.6M | 6M) multisite: N openssl: OpenSSL 3.0.13 30 Jan 2024 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.004 () Free space on disk containing Updraft's temporary directory: 249575.4 MB
+0000.034 () Restore setup, now closing connection and starting restore over AJAX.
+0000.002 () Opened log file at time: Wed, 28 Aug 2024 01:06:04 +0000 on http://localhost/intro-cms-college
+0000.003 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.4 WP: 6.5.5 PHP: 8.2.18 (apache2handler, Windows NT DESKTOP-7NL96UA 10.0 build 19045 (Windows 10) AMD64) MySQL: 8.3.0 (max packet size=67108864) WPLANG: en_CA Server: Apache/2.4.59 (Win64) PHP/8.2.18 mod_fcgid/2.3.10-dev safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 3.7M | 6M) multisite: N openssl: OpenSSL 3.0.13 30 Jan 2024 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.003 () Free space on disk containing Updraft's temporary directory: 249574.6 MB
+0000.004 () Ensuring WP_Filesystem is setup for a restore
+0000.006 () WP_Filesystem is setup and ready for a restore
+0000.014 () Restore job started. Entities to restore: plugins, themes, uploads, others, db. Restore options: {"include_unspecified_tables":false,"tables_to_restore":["wp_options","wp_users","wp_usermeta","wp_commentmeta","wp_comments","wp_links","wp_postmeta","wp_posts","wp_term_relationships","wp_term_taxonomy","wp_termmeta","wp_terms"],"tables_to_skip":[],"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.017 () PHP event: code E_WARNING: mkdir(): File exists (line 558, C:\wamp64\www\intro-cms-college\wp-admin\includes\class-wp-filesystem-direct.php)
+0000.033 () Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.035 () Entity: db
+0000.035 () restore_backup(backup_file=backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-db.gz, type=db, info=a:0:{}, last_one=)
+0000.036 () Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-db.gz, 0 Mb)
+0000.036 () PHP event: code E_WARNING: mkdir(): File exists (line 558, C:\wamp64\www\intro-cms-college\wp-admin\includes\class-wp-filesystem-direct.php)
+0000.038 () Database successfully unpacked
+0000.039 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.039 () Using direct MySQL access; value of use_mysqli is: 1
+0000.043 () SQL compatibility mode is: NO_AUTO_VALUE_ON_ZERO,
+0000.115 () Max packet size: 64 MB
+0000.115 () Entering maintenance mode
+0000.115 () Enabling Maintenance mode&#8230;
+0000.156 () Backup of: http://localhost/intro-cms-college
+0000.159 () Content URL: http://localhost/intro-cms-college/wp-content
+0000.160 () Uploads URL: http://localhost/intro-cms-college/wp-content/uploads
+0000.160 () Old table prefix: wp_
+0000.160 () UpdraftPlus plugin slug: updraftplus/updraftplus.php
+0000.160 () Site information: multisite=0
+0000.160 () Site information: sql_mode=
+0000.163 () Skipped execution of SQL statement (unwanted or internally handled type=18): /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+0000.164 () New table prefix: re_
+0000.169 () Processing table (MyISAM): wp_options - will restore as: re_options
+0000.187 () Atomic restore: dropping original table (wp_options)
+0000.191 () Atomic restore: renaming new table (re_options) to final table name (wp_options)
+0000.197 () Restoring prior UD configuration (table: wp_options; keys: 4)
+0000.211 () Processing table (MyISAM): wp_users - will restore as: re_users
+0000.230 () Atomic restore: dropping original table (wp_users)
+0000.239 () Atomic restore: renaming new table (re_users) to final table name (wp_users)
+0000.249 () Processing table (MyISAM): wp_usermeta - will restore as: re_usermeta
+0000.266 () Atomic restore: dropping original table (wp_usermeta)
+0000.270 () Atomic restore: renaming new table (re_usermeta) to final table name (wp_usermeta)
+0000.277 () Processing table (MyISAM): wp_commentmeta - will restore as: re_commentmeta
+0000.287 () Atomic restore: dropping original table (wp_commentmeta)
+0000.291 () Atomic restore: renaming new table (re_commentmeta) to final table name (wp_commentmeta)
+0000.297 () Processing table (MyISAM): wp_comments - will restore as: re_comments
+0000.311 () Atomic restore: dropping original table (wp_comments)
+0000.317 () Atomic restore: renaming new table (re_comments) to final table name (wp_comments)
+0000.323 () Processing table (MyISAM): wp_links - will restore as: re_links
+0000.333 () Atomic restore: dropping original table (wp_links)
+0000.340 () Atomic restore: renaming new table (re_links) to final table name (wp_links)
+0000.348 () Processing table (MyISAM): wp_postmeta - will restore as: re_postmeta
+0000.365 () Atomic restore: dropping original table (wp_postmeta)
+0000.372 () Atomic restore: renaming new table (re_postmeta) to final table name (wp_postmeta)
+0000.381 () Processing table (MyISAM): wp_posts - will restore as: re_posts
+0000.403 () Atomic restore: dropping original table (wp_posts)
+0000.413 () Atomic restore: renaming new table (re_posts) to final table name (wp_posts)
+0000.423 () Processing table (MyISAM): wp_term_relationships - will restore as: re_term_relationships
+0000.435 () Atomic restore: dropping original table (wp_term_relationships)
+0000.439 () Atomic restore: renaming new table (re_term_relationships) to final table name (wp_term_relationships)
+0000.446 () Processing table (MyISAM): wp_term_taxonomy - will restore as: re_term_taxonomy
+0000.461 () Atomic restore: dropping original table (wp_term_taxonomy)
+0000.468 () Atomic restore: renaming new table (re_term_taxonomy) to final table name (wp_term_taxonomy)
+0000.473 () Processing table (MyISAM): wp_termmeta - will restore as: re_termmeta
+0000.481 () Atomic restore: dropping original table (wp_termmeta)
+0000.487 () Atomic restore: renaming new table (re_termmeta) to final table name (wp_termmeta)
+0000.501 () Processing table (MyISAM): wp_terms - will restore as: re_terms
+0000.508 () Skipped execution of SQL statement (unwanted or internally handled type=18): /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+0000.523 () Unlocking database and leaving maintenance mode
+0000.523 () Disabling Maintenance mode&#8230;
+0000.523 () Atomic restore: dropping original table (wp_terms)
+0000.529 () Atomic restore: renaming new table (re_terms) to final table name (wp_terms)
+0000.536 () Finished: lines processed: 43 in 0.48 seconds
+0000.537 () Cleaning up rubbish...
+0000.538 () Begin search and replace (updraftplus_restored_db)
+0000.538 () [Database-replace-site-url] Database: search and replace site URL
+0000.538 () This option was not selected.
+0000.545 () Entity: plugins
+0000.545 () restore_backup(backup_file=backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-plugins.zip, type=plugins, info=a:3:{s:4:"path";s:50:"C:\wamp64\www\intro-cms-college/wp-content/plugins";s:11:"description";s:7:"Plugins";s:20:"singular_description";s:6:"Plugin";}, last_one=)
+0000.546 () Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-plugins.zip, 14.8 MB)
+0000.552 () Unzipping backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-plugins.zip to C:/wamp64/www/intro-cms-college/wp-content/upgrade/ea66cc8d/ using UpdraftPlus_ZipArchive, starting index 0
+0001.339 () Unzip progress: 1002 out of 2082 files (26.6 MB, plugins/updraftplus/images/udp-logo-white.png)
+0002.894 () Unzip progress: 2003 out of 2082 files (48.1 MB, plugins/updraftplus/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcherInterface.php)
+0002.949 () Unzip progress: 2082 out of 2082 files (48.8 MB, plugins/__MACOSX/icms-copyright/._icms-copyright.php)
+0002.955 () Moving old data: filesystem method / updraft_dir is potentially possible
+0002.955 () Moving old data: can potentially use wp_filesystem method / -old
+0002.955 () Moving old data out of the way...
+0003.471 () Top-level entities being moved: advanced-custom-fields, akismet, classic-widgets, custom-post-type-ui, hello.php, icms-compositions, icms-copyright, index.php, mon-premier-plugin, polylang, simple-custom-post-order, updraftplus, __MACOSX
+0003.543 () Moving unpacked backup into place...
+0004.102 () Top-level entities being moved: advanced-custom-fields, custom-post-type-ui, index.php, simple-custom-post-order, updraftplus, __MACOSX
+0004.111 () Cleaning up rubbish...
+0004.115 () Entity: themes
+0004.115 () restore_backup(backup_file=backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-themes.zip, type=themes, info=a:3:{s:4:"path";s:49:"C:\wamp64\www\intro-cms-college/wp-content/themes";s:11:"description";s:6:"Themes";s:20:"singular_description";s:5:"Theme";}, last_one=)
+0004.116 () Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-themes.zip, 2.8 MB)
+0004.117 () Unzipping backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-themes.zip to C:/wamp64/www/intro-cms-college/wp-content/upgrade/0fe8b440/ using UpdraftPlus_ZipArchive, starting index 0
+0004.302 () Unzip progress: 257 out of 257 files (4.1 MB, themes/twentytwentyone-child/template-parts/chaise.php)
+0004.306 () Moving old data: filesystem method / updraft_dir is potentially possible
+0004.307 () Moving old data: can potentially use wp_filesystem method / -old
+0004.307 () Moving old data out of the way...
+0004.359 () Top-level entities being moved: index.php, twentytwentyone, twentytwentyone-child
+0004.361 () Moving unpacked backup into place...
+0004.404 () Top-level entities being moved: index.php, twentytwentyone, twentytwentyone-child
+0004.409 () Cleaning up rubbish...
+0004.411 () Entity: uploads
+0004.411 () restore_backup(backup_file=backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:50:"C:\wamp64\www\intro-cms-college/wp-content/uploads";s:11:"description";s:7:"Uploads";}, last_one=)
+0004.412 () Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-uploads.zip, 2.5 MB)
+0004.414 () Unzipping backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-uploads.zip to C:/wamp64/www/intro-cms-college/wp-content/upgrade/1f7ebd1a/ using UpdraftPlus_ZipArchive, starting index 0
+0004.465 () Unzip progress: 56 out of 56 files (2.5 MB, uploads/2024/08/chaise-6-relaxed-lounge-chair.jpg)
+0004.468 () Moving old data: filesystem method / updraft_dir is potentially possible
+0004.468 () Moving old data: can potentially use wp_filesystem method / -old
+0004.468 () Moving old data out of the way...
+0004.487 () Moving unpacked backup into place...
+0004.497 () Cleaning up rubbish...
+0004.500 () Entity: others
+0004.500 () restore_backup(backup_file=backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-others.zip, type=others, info=a:2:{s:4:"path";s:42:"C:\wamp64\www\intro-cms-college/wp-content";s:11:"description";s:6:"Others";}, last_one=1)
+0004.501 () Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-others.zip, 0 MB)
+0004.502 () Unzipping backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-others.zip to C:/wamp64/www/intro-cms-college/wp-content/upgrade/1327463a/ using UpdraftPlus_ZipArchive, starting index 0
+0004.504 () Unzip progress: 1 out of 1 files (30 B, index.php)
+0004.509 () Cleaning up rubbish...
+0004.534 () Restore successful!
+0004.535 () Restore successful

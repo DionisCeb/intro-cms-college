@@ -6,9 +6,21 @@ Template: twentytwentyone
 Version: 1
 */
 
-@import url('./styles/header.css');
-@import url('./styles/video.css');
 
 @import url('./styles/carte.css');
 @import url('./styles/container-carte.css');
 
+
+
+
+
+.titre-catalogue {
+    text-align: center;
+    color: var(--carte-text);
+    font-weight: bold;
+}
+
+.site-title {
+    color: red;
+    display: none;
+}

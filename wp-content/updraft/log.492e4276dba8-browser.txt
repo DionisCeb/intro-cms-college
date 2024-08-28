@@ -1,0 +1,83 @@
+0000.014 (R) [notice] Looking for db archive: file name: backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-db.gz
+0000.015 (R) [notice] Archive is expected to be size: 22.3 KB: OK
+0000.018 (R) [notice] Looking for plugins archive: file name: backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-plugins.zip
+0000.019 (R) [notice] Archive is expected to be size: 15177.5 KB: OK
+0000.021 (R) [notice] Looking for themes archive: file name: backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-themes.zip
+0000.022 (R) [notice] Archive is expected to be size: 2878.1 KB: OK
+0000.028 (R) [notice] Looking for uploads archive: file name: backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-uploads.zip
+0000.029 (R) [notice] Archive is expected to be size: 2518.3 KB: OK
+0000.030 (R) [notice] Looking for others archive: file name: backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-others.zip
+0000.031 (R) [notice] Archive is expected to be size: 0.1 KB: OK
+0000.033 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.036 (R) [notice] Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-db.gz, 0 Mb)
+0000.039 (R) [notice] Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.115 (R) [notice] Enabling Maintenance mode&#8230;
+0000.157 (R) [notice] Backup of: http://localhost/intro-cms-college
+0000.159 (R) [notice] Content URL: http://localhost/intro-cms-college/wp-content
+0000.160 (R) [notice] Uploads URL: http://localhost/intro-cms-college/wp-content/uploads
+0000.160 (R) [notice] Old table prefix: wp_
+0000.160 (R) [notice] UpdraftPlus plugin slug: updraftplus/updraftplus.php
+0000.160 (R) [notice] Site information: multisite = 0
+0000.160 (R) [notice] Site information: sql_mode = 
+0000.164 (R) [notice] New table prefix: re_
+0000.169 (R) [notice] Processing table (MyISAM):  wp_options - will restore as: re_options
+0000.187 (R) [notice] Atomic restore: dropping original table (wp_options)
+0000.192 (R) [notice] Atomic restore: renaming new table (re_options) to final table name (wp_options)
+0000.211 (R) [notice] Processing table (MyISAM):  wp_users - will restore as: re_users
+0000.230 (R) [notice] Atomic restore: dropping original table (wp_users)
+0000.239 (R) [notice] Atomic restore: renaming new table (re_users) to final table name (wp_users)
+0000.249 (R) [notice] Processing table (MyISAM):  wp_usermeta - will restore as: re_usermeta
+0000.266 (R) [notice] Atomic restore: dropping original table (wp_usermeta)
+0000.270 (R) [notice] Atomic restore: renaming new table (re_usermeta) to final table name (wp_usermeta)
+0000.277 (R) [notice] Processing table (MyISAM):  wp_commentmeta - will restore as: re_commentmeta
+0000.287 (R) [notice] Atomic restore: dropping original table (wp_commentmeta)
+0000.291 (R) [notice] Atomic restore: renaming new table (re_commentmeta) to final table name (wp_commentmeta)
+0000.298 (R) [notice] Processing table (MyISAM):  wp_comments - will restore as: re_comments
+0000.311 (R) [notice] Atomic restore: dropping original table (wp_comments)
+0000.317 (R) [notice] Atomic restore: renaming new table (re_comments) to final table name (wp_comments)
+0000.324 (R) [notice] Processing table (MyISAM):  wp_links - will restore as: re_links
+0000.333 (R) [notice] Atomic restore: dropping original table (wp_links)
+0000.340 (R) [notice] Atomic restore: renaming new table (re_links) to final table name (wp_links)
+0000.349 (R) [notice] Processing table (MyISAM):  wp_postmeta - will restore as: re_postmeta
+0000.365 (R) [notice] Atomic restore: dropping original table (wp_postmeta)
+0000.372 (R) [notice] Atomic restore: renaming new table (re_postmeta) to final table name (wp_postmeta)
+0000.381 (R) [notice] Processing table (MyISAM):  wp_posts - will restore as: re_posts
+0000.404 (R) [notice] Atomic restore: dropping original table (wp_posts)
+0000.413 (R) [notice] Atomic restore: renaming new table (re_posts) to final table name (wp_posts)
+0000.423 (R) [notice] Processing table (MyISAM):  wp_term_relationships - will restore as: re_term_relationships
+0000.435 (R) [notice] Atomic restore: dropping original table (wp_term_relationships)
+0000.439 (R) [notice] Atomic restore: renaming new table (re_term_relationships) to final table name (wp_term_relationships)
+0000.446 (R) [notice] Processing table (MyISAM):  wp_term_taxonomy - will restore as: re_term_taxonomy
+0000.461 (R) [notice] Atomic restore: dropping original table (wp_term_taxonomy)
+0000.468 (R) [notice] Atomic restore: renaming new table (re_term_taxonomy) to final table name (wp_term_taxonomy)
+0000.473 (R) [notice] Processing table (MyISAM):  wp_termmeta - will restore as: re_termmeta
+0000.481 (R) [notice] Atomic restore: dropping original table (wp_termmeta)
+0000.487 (R) [notice] Atomic restore: renaming new table (re_termmeta) to final table name (wp_termmeta)
+0000.501 (R) [notice] Processing table (MyISAM):  wp_terms - will restore as: re_terms
+0000.523 (R) [notice] Disabling Maintenance mode&#8230;
+0000.523 (R) [notice] Atomic restore: dropping original table (wp_terms)
+0000.529 (R) [notice] Atomic restore: renaming new table (re_terms) to final table name (wp_terms)
+0000.536 (R) [notice] Finished: lines processed: 43 in 0.48 seconds
+0000.537 (R) [notice] Cleaning up rubbish...
+0000.538 (R) [notice] This option was not selected.
+0000.546 (R) [notice] Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-plugins.zip, 14.8 MB)
+0001.339 (R) [notice] Unzip progress: 1002 out of 2082 files (26.6 MB, plugins/updraftplus/images/udp-logo-white.png)
+0002.894 (R) [notice] Unzip progress: 2003 out of 2082 files (48.1 MB, plugins/updraftplus/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcherInterface.php)
+0002.949 (R) [notice] Unzip progress: 2082 out of 2082 files (48.8 MB, plugins/__MACOSX/icms-copyright/._icms-copyright.php)
+0002.955 (R) [notice] Moving old data out of the way...
+0003.543 (R) [notice] Moving unpacked backup into place...
+0004.111 (R) [notice] Cleaning up rubbish...
+0004.116 (R) [notice] Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-themes.zip, 2.8 MB)
+0004.302 (R) [notice] Unzip progress: 257 out of 257 files (4.1 MB, themes/twentytwentyone-child/template-parts/chaise.php)
+0004.307 (R) [notice] Moving old data out of the way...
+0004.362 (R) [notice] Moving unpacked backup into place...
+0004.409 (R) [notice] Cleaning up rubbish...
+0004.412 (R) [notice] Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-uploads.zip, 2.5 MB)
+0004.465 (R) [notice] Unzip progress: 56 out of 56 files (2.5 MB, uploads/2024/08/chaise-6-relaxed-lounge-chair.jpg)
+0004.468 (R) [notice] Moving old data out of the way...
+0004.487 (R) [notice] Moving unpacked backup into place...
+0004.497 (R) [notice] Cleaning up rubbish...
+0004.501 (R) [notice] Unpacking backup... (backup_2024-08-16-2351_Intro_CMS_College_7945a08e1e44-others.zip, 0 MB)
+0004.504 (R) [notice] Unzip progress: 1 out of 1 files (30 B, index.php)
+0004.509 (R) [notice] Cleaning up rubbish...
+0004.535 (R) [notice] Restore successful!
